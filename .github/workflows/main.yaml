@@ -33,3 +33,10 @@ jobs:
           echo "Working Directory: $(pwd)"
           echo "Contents of Working Directory: $(ls -1)"
           echo "Contents of site-packages: $(ls -1 venv/lib/python*)"
+
+      - name: Run tests with pytest
+        run: |
+          python -m pytest tests/test_mock.py
+
+      - name: Run tests unittest
+        run: python -m unittest discover -s tests -p 'test_*.py'
