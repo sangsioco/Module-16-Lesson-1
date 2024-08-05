@@ -10,7 +10,7 @@ class TestAPI(unittest.TestCase):
         payload = {'num1': 2, 'num2': 3}
         response = self.app.post('/sum', json=payload)
         data = response.get_json()
-        self.assertEqual(data['result'], 6)
+        self.assertEqual(data['result'], 5)
 
 if __name__ == '__main__':
     unittest.main()
